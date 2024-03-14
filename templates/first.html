@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block content %}
+<center>
+    <h1>Размещение по каютам</h1>
+</center>
+{% set user_list = ['Ридли Скотт', 'Энди Уир', 'Марк Уотни', 'Венката Капур', 'Тедди Сандерс', 'Шон Бин'] %}
+<ul>
+    {% for user in user_list %}
+        <h3>{{ user }} - Каюта № {{ loop.index }} {% if loop.first %} - капитан корабля {% endif %}<br></h3>
+    {% endfor %}
+</ul>
+{% endblock %}
